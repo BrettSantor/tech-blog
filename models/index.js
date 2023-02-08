@@ -11,7 +11,7 @@ Post.hasMany(Comment, {
     foreignKey: 'post_id'
 });
 
-comments.belongsTo(Post,{
+Comment.belongsTo(Post,{
     foreignKey: 'post_id'
 });
 

@@ -2,7 +2,11 @@ const { Model, Datatypes } = require('sequelize');
 const bcrypt = require('bcrypt');
 const sequelize = require('../config/connection');
 
-class Reader extends Model {}
+class User extends Model {
+    checkPassword(loginPw) {
+        return bcrypt.compareSync(loginPw, this.password);
+      }
+}
 
 Reader.init(
     {
@@ -20,7 +24,7 @@ Reader.init(
         type: Datatypes.STRING,
         allowNull: false,
         validate: {
-            len: [1],
+            len: [6],
         }
     }
 },
@@ -37,7 +41,7 @@ Reader.init(
         }
     },
     sequelize,
-    timestamps: true,
+    timestamps: false,
     freezeTableName: true,
     underscored: true,
     modelName: 'user',
