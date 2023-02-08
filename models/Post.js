@@ -1,4 +1,4 @@
-titconst { Model, Datatypes, DataTypes } = require('sequelize');
+const { Model, Datatypes, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection');
 
 class Post extends Model {}
@@ -6,13 +6,13 @@ class Post extends Model {}
 Post.init(
     {
         id : {
-            type : Datatypes.INTEGER,
+            type : DataTypes.INTEGER,
             allowNull : false,
             primaryKey : true,
             autoIncrement : true,
         },
         title :{
-           type: Datatypes.STRING,
+           type: DataTypes.STRING,
             allowNull: false,
         },
         content : {
