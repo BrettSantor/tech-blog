@@ -18,4 +18,4 @@ const commentSub = async (event) => {
     }
 }
 
-document.querySelector('#sub-btn').addEventListener('click', commentSub);
+document.querySelector('.new-comment').addEventListener('submit', commentSub);

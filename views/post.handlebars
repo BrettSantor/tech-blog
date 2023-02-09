@@ -3,7 +3,15 @@
     <header>{{post.title}}</header></href>
     <p class="" id={{post.id}}>{{post.content}}</p>
 </section>
-<textarea name="comment" id="comment" cols="30" rows="10" placeholder="add comment..."></textarea>
-<button id="sub-btn">submit</button>
-
-<script src="./js/comment.js"></script>
+<div>
+<label for="comment-space">Comments:</label>
+<textarea class="new-comment" name="comment" id="comment" cols="30" rows="10" placeholder="add comment..."></textarea>
+</div>
+<div>
+<button id="sub-btn" type="submit">submit</button>
+</div>
+<section>
+{{#each comments as |comment|}}
+{{!-- display all comments --}}
+{{/each}}
+</section>
