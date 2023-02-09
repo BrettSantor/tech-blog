@@ -7,7 +7,7 @@ const SequelizeStore = require('connect-session-sequelize')(session.Store);
 
 const sequelize = require('./config/connection');
 const routes = require('./controllers');
-const helpers = require('./utils/helpers');
+const helpers = require('./utils/helper');
 
 
 const app = express();
@@ -35,8 +35,8 @@ app.set('view engine', 'handlebars');
 
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
-app.use(router);
-app.use(express.static(path.join(_dirname, 'public')));
+app.use(routes);
+app.use(express.static(path.join(__dirname, 'public')));
 
 sequelize.sync({ force:false}).then(() => {
     app.listen(PORT, () => console.log(`I hear you at ${PORT}...`))
