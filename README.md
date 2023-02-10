@@ -16,7 +16,7 @@ This app utilizes cookies to save login data. It also hashes passwords for secur
 ## Usage 
  Use the login page to log in to the site. There you can access posts and the dashboard. You may also log out and have your credentials saved for future log ins.
 ## Credits 
- n/a
+ All this coding made possible by [Jerome Chenette](https://github.com/jeromechenette) and my fellow students who help each other along the way
 ## Contributions 
  n/a
 ## License 
