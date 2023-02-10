@@ -2,9 +2,27 @@
 <section>
     <div id="post-section">
         <h2>User Post</h2>
-            {{#each dashboard.post as |post|}}
-{{> post-details}}
+            {{#each post}}
 {{/each}}
     </div>
    
 </section>
+
+<section>
+    <h3>Create A Post!</h3>
+    <form>
+        <div>
+            <label for="post-name">Post Title:</label>
+            <input type="text" class="form-input" id="post-name">
+        </div>
+        <div class="form-body">
+            <label for="post-body">Post Content:</label>
+            <textarea name="post-body" id="post-body" cols="30" rows="10"></textarea>
+        </div>
+        <div class="form-button">
+            <button type="submit" class="post-btn">Post!</button>
+        </div>
+    </form>
+</section>
+
+<script src="/js/post.js"></script>
