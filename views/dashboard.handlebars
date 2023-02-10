@@ -1,0 +1,12 @@
+<h1>Dashboard</h1>
+
+
+<section>
+    <div id="post-section">
+        <h2>User Post</h2>
+            {{#each dashboard.post as |post|}}
+{{> post-details}}
+{{/each}}
+    </div>
+   
+</section>
