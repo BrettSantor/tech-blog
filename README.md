@@ -1,6 +1,8 @@
 # Tech Blog
 ![badmath](https://img.shields.io/badge/license-MIT-blue)
 ## description
+[Deployed Link](https://lit-sands-00559.herokuapp.com/)
+
 This app utilizes cookies to save login data. It also hashes passwords for secure storing. 
 ## Table of Contents 
  * [Installation](#installation)
